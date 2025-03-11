@@ -1,16 +1,23 @@
-// import { useState } from 'react'
+// importo react-router
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// importo il Layout
 import DefaultLayout from "./layout/DefaultLayout";
 
-// import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
 
 function App() {
 
 
   return (
     <>
-      <DefaultLayout />
-
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />} >
+            <Route path="/" element={<HomePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
 
     </>
   )
