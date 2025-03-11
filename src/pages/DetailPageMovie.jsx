@@ -7,26 +7,38 @@ export default function DetailPageMovie() {
 
     return (
 
-        <div>
+        <div >
+            <section className="container_singleDetail">
 
-            <div>
-                <img src="http://localhost:3000/img/movies_cover/titanic.jpg" alt="" />
-            </div>
+                <img className="img_detail" src="http://localhost:3000/img/movies_cover/titanic.jpg" alt="" />
 
-            <h2> Titolo FIlm</h2>
-            <span> Nome autore</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, aspernatur?
-                Ducimus possimus iste aliquam repellendus fugiat praesentium, velit deserunt
-                veniam modi placeat doloribus, cumque harum odit, nam ullam quos? Aperiam.</p>
+                <div className="container_textDetail">
+                    <h2> Titolo FIlm</h2>
 
-            <section>
-                <h5>Recensioni</h5>
-                <MovieReviewCard />
-                <MovieReviewCard />
-                <MovieReviewCard />
+                    <span> Nome autore</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, aspernatur?
+                        Ducimus possimus iste aliquam repellendus fugiat praesentium, velit deserunt
+                        veniam modi placeat doloribus, cumque harum odit, nam ullam quos</p>
+
+
+
+                </div>
+
+
             </section>
 
-            <Link to="/">Torna alla Home</Link>
+            <section  >
+                <h5 className="review">Recensioni</h5>
+                <div className="container_textReview" >
+                    <MovieReviewCard />
+                    <MovieReviewCard />
+                    <MovieReviewCard />
+
+
+                </div>
+                <Link to="/">Torna alla Home</Link>
+            </section>
+
         </div>
 
 
