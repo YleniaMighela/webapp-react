@@ -6,15 +6,25 @@ export default function HomePage() {
     return (
 
         <main>
-            <h2> MOVIES</h2>
-            <p> Sezione film in evidenza</p>
-            {/* Listato */}
             <div>
-                <MovieListCard />
-                <MovieListCard />
-                <MovieListCard />
-                <MovieListCard />
+                <section className="section_textMain">
+                    <h2> MOVIES</h2>
+                    <span className="evidence"> Film in evidenza</span>
+                </section>
+
+
+
+                {/* Listato */}
+                <section className="section_listaCard">
+                    <MovieListCard />
+                    <MovieListCard />
+                    <MovieListCard />
+                    <MovieListCard />
+                    <MovieListCard />
+                </section>
+
             </div>
+
         </main>
 
 

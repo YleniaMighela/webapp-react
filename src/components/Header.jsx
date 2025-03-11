@@ -7,9 +7,8 @@ export default function Header() {
     return (
         <header>
 
-            <div>
-                <Link to="/"> BOOL MOVIES</Link>
-            </div>
+            <Link to="/"> <h1 id="title">BOOL MOVIES</h1></Link>
+
 
         </header>
 
