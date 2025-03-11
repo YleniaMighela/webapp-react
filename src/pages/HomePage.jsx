@@ -1,3 +1,5 @@
+import MovieListCard from "../components/MovieListCard"
+
 export default function HomePage() {
 
 
@@ -8,7 +10,10 @@ export default function HomePage() {
             <p> Sezione film in evidenza</p>
             {/* Listato */}
             <div>
-                <p>qui ci sarà la lista dei film</p>
+                <MovieListCard />
+                <MovieListCard />
+                <MovieListCard />
+                <MovieListCard />
             </div>
         </main>
 
