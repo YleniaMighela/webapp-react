@@ -1,6 +1,9 @@
 
 
-export default function MovieReviewCard() {
+export default function MovieReviewCard({ reviewProp }) {
+
+    // destrutto l'array di oggetti
+    const { name, text, vote } = reviewProp;
 
 
     return (
@@ -9,11 +12,11 @@ export default function MovieReviewCard() {
 
         <div className="container_singleReview">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam fuga dolores fugit maiores eum amet ullam itaque possimus sed necessitatibus deserunt blanditiis optio rerum, rem qui porro vitae beatae.</p>
+            <p>{text}</p>
 
-            <strong> Vote: 5</strong>
+            <strong> Vote: {vote}</strong>
 
-            <address> da Andrea</address>
+            <address> Da {name}</address>
 
 
         </div>
