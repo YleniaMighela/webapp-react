@@ -26,7 +26,27 @@ export default function HomePage() {
 
     }
 
+
     useEffect(fetchMovies, [])
+
+
+    // creo una funzione che mi permette di ciclare sul singolo film
+
+    function renderMovies() {
+
+        return movies.map(movie => {
+
+            return (
+                <div className="container_singleCard" key={movie.id}>
+                    <MovieListCard movieProp={movie} />
+                </div>
+
+            )
+
+
+
+        })
+    }
 
 
 
@@ -43,11 +63,8 @@ export default function HomePage() {
 
                 {/* Listato */}
                 <section className="section_listaCard">
-                    <MovieListCard />
-                    <MovieListCard />
-                    <MovieListCard />
-                    <MovieListCard />
-                    <MovieListCard />
+                    {/* richiamo la funzione */}
+                    {renderMovies()}
                 </section>
 
             </div>

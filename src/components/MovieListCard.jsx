@@ -6,7 +6,7 @@ export default function MovieListCard() {
     return (
 
 
-        <div className="container_singleCard">
+        <div >
             <h5 className="title_movie">Titanic</h5>
 
             <img src="http://localhost:3000/img/movies_cover/titanic.jpg" alt="" />
