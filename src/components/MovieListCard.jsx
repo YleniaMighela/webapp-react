@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom"
 
-export default function MovieListCard() {
+export default function MovieListCard({ movieProp }) {
 
+
+    // destrutto l'array di oggetti
+
+    const { id, title, image, director, abstract, genre } = movieProp;
 
     return (
 
 
         <div >
-            <h5 className="title_movie">Titanic</h5>
+            <h5 className="title_movie">{title}</h5>
 
-            <img src="http://localhost:3000/img/movies_cover/titanic.jpg" alt="" />
-            <address className="autor"><i>By nome autore</i></address>
+            <img src={image} alt={title} />
+
+            <span className="genre"><strong>Genere: {genre}</strong></span>
 
             <div className="container_text">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto labore ad sapiente animi incidunt. Sit nihil sed, aliquam rerum ipsam illo optio impedit aperiam molestiae.
-                </p>
+                <p>{abstract}</p>
+                <address className="autor"><i>By {director}</i></address>
 
-                <Link to="/movies" className="details_movie">Dettagli</Link>
+                <Link to={`movies/${id}`} className="details_movie">Dettagli</Link>
             </div>
 
 

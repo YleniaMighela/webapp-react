@@ -83,9 +83,14 @@ img {
     margin-left: 20px;
 }
 
+.genre {
+    margin-left: 20px;
+
+}
+
 .container_text {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin: 15px;
