@@ -1,6 +1,8 @@
+// importo axios per effetuare le chiamate
+import axios from 'axios'
 import { useState } from "react";
 
-export default function FormReview() {
+export default function FormReview({ movie_id, reloadReview }) {
 
     // mi creo una variabile di stato (oggetto) assegnando ai campi del form dei valori inizialmente vuoti, dopodichè si andranno ad aggiornare con la variabile di stato dell'useState
 
@@ -21,13 +23,36 @@ export default function FormReview() {
         setFormData({ ...formData, [name]: value });
     }
 
+
+
+    // mi salvo in una costante l'endpoint su cui partirà la chiamata andando ad utilizzare le prop per passare l'id del film
+    const urlEndpoint = `http://localhost:3000/api/movies/${movie_id}/reviews`;
+
+    // funzione di invio della richiesta al submite del form
+    const submitReview = (e) => {
+        e.preventDefault();
+
+        axios.post(urlEndpoint, formData)
+            .then(() => {
+                setFormData(initialFormData)
+                // vado a richiamare la prop che esegue la funzione del fetchMovie
+                reloadReview()
+            }
+
+            )
+
+            .catch(err => console.log(err))
+
+    }
+
+
     return (
         <div >
 
             <h5>Aggiungi la tua recensione</h5>
 
             <div >
-                <form >
+                <form onSubmit={submitReview}>
                     <div >
                         <label>Nome</label>
                         <input type="text" name="name" value={formData.name} onChange={setFieldValue} />

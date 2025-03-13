@@ -85,7 +85,8 @@ export default function DetailPageMovie() {
 
                 {/* sezione FORM */}
                 <section>
-                    <FormReview />
+                    {/* la props relativa al fetchMovie fa si che lo stato di movie si aggiorna ogni volta inserito un nuovo valore(recensione) */}
+                    <FormReview movie_id={movie.id} reloadReview={fetchMovie} />
                 </section>
 
                 <Link to="/">Torna alla Home</Link>
