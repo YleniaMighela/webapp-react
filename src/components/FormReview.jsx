@@ -6,7 +6,7 @@ export default function FormReview({ }) {
     return (
         <div >
 
-            <h5>Add your review</h5>
+            <h5>Aggiungi la tua recensione</h5>
 
             <div >
                 <form >
