@@ -7,12 +7,19 @@ export default function FormReview() {
     const initialFormData = {
         name: "",
         text: "",
-        vote: 1
+        vote: 0
     };
 
     // utilizzo lo useState per la gestione delle informazioni raccolte dai campi del form, in cui formData è lo stato che contiene il valore, setformdata è la funzione che aggiorna lo stato
     const [formData, setFormData] = useState(initialFormData);
 
+    // funzione che permette al setFielValue di ricevere un evento come parametro (l'evento sta nell'inserimento del dato da parte dell'utente e che al momento dell'onChange il valore di quel campo si aggiorna con il dato inserito) 
+
+    const setFieldValue = (e) => {
+        const { value, name } = e.target;
+        // la funzione (setformData) inquesto momento  prende tutti l'oggetto precedente (formaData), e al momento dell'onChange lo modifica con i nuovi dati inseriti
+        setFormData({ ...formData, [name]: value });
+    }
 
     return (
         <div >
@@ -23,15 +30,15 @@ export default function FormReview() {
                 <form >
                     <div >
                         <label>Nome</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" value={formData.name} onChange={setFieldValue} />
                     </div>
                     <div >
                         <label>Recensione</label>
-                        <textarea name="text"></textarea>
+                        <textarea name="text" value={formData.text} onChange={setFieldValue}></textarea>
                     </div>
                     <div >
                         <label>Voto</label>
-                        <input type="number" name='vote' />
+                        <input type="number" name='vote' value={formData.vote} onChange={setFieldValue} />
                     </div>
                     <div >
                         <button type="submit" >
