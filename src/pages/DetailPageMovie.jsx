@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 // importo il componente moviecard
 import MovieReviewCard from "../components/MovieReviewCard"
 
@@ -12,7 +12,7 @@ export default function DetailPageMovie() {
     // recupero l'id del film
     const { id } = useParams();
 
-
+    const redirect = useNavigate();
 
     // setto la variabile si stato
     const [movie, setMovie] = useState({});
@@ -30,7 +30,10 @@ export default function DetailPageMovie() {
 
             })
 
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.log(err);
+                if (err.status === 404) redirect("/404")
+            })
 
     }
 
