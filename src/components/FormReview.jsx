@@ -1,6 +1,17 @@
+import { useState } from "react";
 
+export default function FormReview() {
 
-export default function FormReview({ }) {
+    // mi creo una variabile di stato (oggetto) assegnando ai campi del form dei valori inizialmente vuoti, dopodichè si andranno ad aggiornare con la variabile di stato dell'useState
+
+    const initialFormData = {
+        name: "",
+        text: "",
+        vote: 1
+    };
+
+    // utilizzo lo useState per la gestione delle informazioni raccolte dai campi del form, in cui formData è lo stato che contiene il valore, setformdata è la funzione che aggiorna lo stato
+    const [formData, setFormData] = useState(initialFormData);
 
 
     return (
@@ -20,7 +31,7 @@ export default function FormReview({ }) {
                     </div>
                     <div >
                         <label>Voto</label>
-                        <input type="number" />
+                        <input type="number" name='vote' />
                     </div>
                     <div >
                         <button type="submit" >
