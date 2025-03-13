@@ -27,8 +27,9 @@ a {
 /* CONTENUTO MAIN */
 
 .section_textMain {
+    background-color: rgba(0, 0, 0, 0.925);
     text-align: center;
-    margin: 20px;
+
 
 }
 
@@ -51,7 +52,7 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-
+    background-color: rgba(0, 0, 0, 0.925);
 
 
 
@@ -69,9 +70,11 @@ h2 {
 }
 
 .container_singleCard {
+
     width: 30%;
     margin: 10px;
     border: 2px solid rgb(71, 37, 221);
+
 }
 
 img {
@@ -84,6 +87,7 @@ img {
 }
 
 .genre {
+    color: white;
     margin-left: 20px;
 
 }
@@ -94,6 +98,7 @@ img {
     align-items: center;
     flex-wrap: wrap;
     margin: 15px;
+    color: white;
 }
 
 .details_movie {
@@ -111,7 +116,9 @@ img {
 .container_singleDetail {
     display: flex;
     justify-content: start;
-    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.925);
+    color: white;
+    /* margin: 10px; */
 
 }
 
@@ -127,6 +134,10 @@ img {
 
 /* SEZIONE RECENSIONI */
 
+.section_review {
+    border-radius: 2%;
+    background-color: rgba(63, 211, 221, 0.082);
+}
 
 .review {
     margin: 20px;
@@ -134,12 +145,15 @@ img {
 }
 
 .container_textReview {
+    display: flex;
+    justify-content: center;
     margin: 15px;
 }
 
 .container_singleReview {
-
     margin: 10px;
+    padding: 5px;
+    border-radius: 8%;
     border: 2px solid rgb(71, 37, 221);
 }
 

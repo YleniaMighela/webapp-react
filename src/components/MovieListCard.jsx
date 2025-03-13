@@ -10,7 +10,7 @@ export default function MovieListCard({ movieProp }) {
     return (
 
 
-        <div >
+        <div>
             <h5 className="title_movie">{title}</h5>
 
             {image && <img src={image} alt={title} />}
