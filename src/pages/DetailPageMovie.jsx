@@ -73,7 +73,7 @@ export default function DetailPageMovie() {
                         <h2> {movie.title}</h2>
 
                         <span> {movie.director}</span>
-                        <p>{movie.abstract}</p>
+                        <p>{movie.abstract || "Contenuto non trovato"}</p>
                     </div>
 
 

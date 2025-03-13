@@ -12,7 +12,7 @@ export default function MovieReviewCard({ reviewProp }) {
 
         <div className="container_singleReview">
 
-            <p>{text}</p>
+            <p>{text || "Testo non trovato"}</p>
 
             <strong> Vote: {vote}</strong>
 
