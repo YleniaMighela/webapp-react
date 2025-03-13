@@ -49,23 +49,51 @@ export default function FormReview({ movie_id, reloadReview }) {
     return (
         <div >
 
-            <h5>Aggiungi la tua recensione</h5>
+
 
             <div >
                 <form onSubmit={submitReview}>
-                    <div >
-                        <label>Nome</label>
-                        <input type="text" name="name" value={formData.name} onChange={setFieldValue} />
-                    </div>
-                    <div >
-                        <label>Recensione</label>
-                        <textarea name="text" value={formData.text} onChange={setFieldValue}></textarea>
-                    </div>
-                    <div >
-                        <label>Voto</label>
-                        <input type="number" name='vote' value={formData.vote} onChange={setFieldValue} />
-                    </div>
-                    <div >
+                    <div className='form_review'>
+
+                        {/* nome */}
+                        <div className='container_singleForm'>
+                            <label>Inserisci il tuo nome</label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={setFieldValue}
+                                placeholder='Nome'
+                            />
+
+                        </div>
+
+                        {/* recensione */}
+                        <div className='container_singleForm'>
+                            <label>Inserisci la tua recensione</label>
+                            <textarea
+                                name="text"
+                                value={formData.text}
+                                onChange={setFieldValue}
+                                placeholder='Recensione'
+                            >
+                            </textarea>
+
+                        </div>
+
+                        {/* voto */}
+                        <div className='container_singleForm'>
+                            <label>Inserisci la tua valutazione</label>
+                            <input
+                                type="number"
+                                name='vote'
+                                value={formData.vote}
+                                onChange={setFieldValue}
+
+                            />
+                        </div>
+
+                        {/* bottone */}
                         <button type="submit" >
                             Invia la tua recensione
                         </button>

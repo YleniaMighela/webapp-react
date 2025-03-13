@@ -74,7 +74,7 @@ export default function DetailPageMovie() {
 
 
                 {/* sezione RECENSIONI */}
-                <section >
+                <section className='section_review' >
                     <h5 className="review">Recensioni</h5>
                     <div className="container_textReview" >
                         {/* richiamo la funzione */}
@@ -84,7 +84,8 @@ export default function DetailPageMovie() {
 
 
                 {/* sezione FORM */}
-                <section>
+                <section className="section_form" >
+                    <h5>Aggiungi la tua recensione</h5>
                     {/* la props relativa al fetchMovie fa si che lo stato di movie si aggiorna ogni volta inserito un nuovo valore(recensione) */}
                     <FormReview movie_id={movie.id} reloadReview={fetchMovie} />
                 </section>

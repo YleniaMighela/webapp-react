@@ -126,6 +126,8 @@ img {
 
 
 /* SEZIONE RECENSIONI */
+
+
 .review {
     margin: 20px;
     font-size: 20px;
@@ -139,4 +141,43 @@ img {
 
     margin: 10px;
     border: 2px solid rgb(71, 37, 221);
+}
+
+
+/* SEZIONE FORM */
+.section_form h5 {
+    color: rgb(25, 151, 224);
+    font-size: 30px;
+    margin: 35px;
+
+
+}
+
+.form_review {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+    margin: 30px;
+    font-size: 15px;
+
+}
+
+.container_singleForm {
+    width: 30%;
+
+}
+
+label {
+    margin-left: 10px;
+}
+
+input,
+textarea,
+button {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    border: 3px solid rgb(71, 37, 221);
+
 }
