@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"
 // importo il componente moviecard
 import MovieReviewCard from "../components/MovieReviewCard"
+import FormReview from "../components/FormReview"
+
 
 
 export default function DetailPageMovie() {
@@ -83,7 +85,7 @@ export default function DetailPageMovie() {
 
                 {/* sezione FORM */}
                 <section>
-
+                    <FormReview />
                 </section>
 
                 <Link to="/">Torna alla Home</Link>
