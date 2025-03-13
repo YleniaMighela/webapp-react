@@ -66,8 +66,8 @@ export default function DetailPageMovie() {
             <div >
                 <section className="container_singleDetail">
 
-                    <img className="img_detail"
-                        src={movie.image} alt={movie.title} />
+                    {movie.image && <img className="img_detail"
+                        src={movie.image} alt={movie.title} />}
 
                     <div className="container_textDetail">
                         <h2> {movie.title}</h2>
