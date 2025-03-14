@@ -25,9 +25,18 @@ a {
 }
 
 /* CONTENUTO MAIN */
+main {
+    width: 100%;
+    height: 100%;
+    background-image: url(picture-image_2738409.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+}
 
 .section_textMain {
-    background-color: rgba(0, 0, 0, 0.925);
+
     text-align: center;
 
 
@@ -52,7 +61,7 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.925);
+    /* background-color: rgba(0, 0, 0, 0.925); */
 
 
 
@@ -70,7 +79,7 @@ h2 {
 }
 
 .container_singleCard {
-
+    background-color: rgba(0, 0, 0, 0.925);
     width: 30%;
     margin: 10px;
     border: 2px solid rgb(71, 37, 221);
@@ -113,12 +122,15 @@ img {
 
 
 /* SEZIONE DETTAGLIO */
+
+
 .container_singleDetail {
     display: flex;
     justify-content: start;
-    background-color: rgba(0, 0, 0, 0.925);
-    color: white;
-    /* margin: 10px; */
+    /* 
+    background-color: rgba(0, 0, 0, 0.925); */
+
+
 
 }
 
@@ -127,6 +139,7 @@ img {
 }
 
 .container_textDetail {
+
     margin-top: 10px;
     padding: 10px;
 }
@@ -160,6 +173,8 @@ img {
 
 /* SEZIONE FORM */
 .section_form h5 {
+    display: flex;
+    justify-content: start;
     color: rgb(25, 151, 224);
     font-size: 30px;
     margin: 35px;
@@ -168,8 +183,8 @@ img {
 }
 
 .form_review {
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
     gap: 10px;
     align-items: center;
     margin: 30px;
@@ -182,7 +197,7 @@ img {
 
 }
 
-label {
+.label_review {
     margin-left: 10px;
 }
 

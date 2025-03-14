@@ -70,7 +70,7 @@ export default function FormReview({ movie_id, reloadReview }) {
 
                         {/* recensione */}
                         <div className='container_singleForm'>
-                            <label>Inserisci la tua recensione</label>
+                            <label className='label_review'>Inserisci la tua recensione</label>
                             <textarea
                                 name="text"
                                 value={formData.text}

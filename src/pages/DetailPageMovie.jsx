@@ -56,13 +56,13 @@ export default function DetailPageMovie() {
     // RITORNO DELLE VARIE FUNZIONI CREATE SOPRA
     return (
         <>
-
-            <div >
-                {/* sezione DETTAGLIO FILM */}
-                <section className="container_singleDetail">
+            {/* sezione DETTAGLIO FILM */}
+            <main >
+                <div className="container_singleDetail">
 
                     {movie.image && <img className="img_detail"
                         src={movie.image} alt={movie.title} />}
+
 
                     <div className="container_textDetail">
                         <h2> {movie.title}</h2>
@@ -70,17 +70,22 @@ export default function DetailPageMovie() {
                         <span> {movie.director}</span>
                         <p>{movie.abstract || "Contenuto non trovato"}</p>
                     </div>
-                </section>
+
+                    {/* sezione RECENSIONI */}
+                    <section className='section_review' >
+                        <div>
+                            <h5 className="review">Recensioni</h5>
+                            <div className="container_textReview" >
+                                {/* richiamo la funzione */}
+                                {renderReviews()}
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
 
 
-                {/* sezione RECENSIONI */}
-                <section className='section_review' >
-                    <h5 className="review">Recensioni</h5>
-                    <div className="container_textReview" >
-                        {/* richiamo la funzione */}
-                        {renderReviews()}
-                    </div>
-                </section>
+
 
 
                 {/* sezione FORM */}
@@ -92,7 +97,7 @@ export default function DetailPageMovie() {
 
                 <Link to="/">Torna alla Home</Link>
 
-            </div>
+            </main>
 
         </>
     );
