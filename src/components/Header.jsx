@@ -9,6 +9,7 @@ export default function Header() {
 
             <Link to="/"> <h1 id="title">BOOL MOVIES</h1></Link>
 
+            <Link to="/movies/create"> Inserisci un film </Link>
 
         </header>
 

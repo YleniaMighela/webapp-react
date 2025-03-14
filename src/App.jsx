@@ -8,6 +8,7 @@ import DefaultLayout from "./layout/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import DetailPageMovie from "./pages/DetailPageMovie";
 import NotFoundPage from "./pages/NotFoundPage"
+import CreateNewMoviePage from "./pages/CreateNewMoviePage";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route element={<DefaultLayout />} >
             <Route path="/" element={<HomePage />} />
             <Route path="/movies/:id" element={<DetailPageMovie />} />
+            <Route path="/movies/create" element={<CreateNewMoviePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
