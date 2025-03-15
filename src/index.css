@@ -2,16 +2,23 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+
 }
+
+
+body {
+    height: 100vh;
+    background-image: url("picture-image_2738409.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
 
 
 /* CONTENUTO HEADER */
 
-header {
 
-    background-color: rgb(174, 231, 235);
-    height: 60px;
-}
 
 a {
     text-decoration: none;
@@ -25,18 +32,7 @@ a {
 }
 
 /* CONTENUTO MAIN */
-main {
-    width: 100%;
-    height: 100%;
-    background-image: url(picture-image_2738409.jpg);
-    background-size: cover;
-    background-position: center;
-
-
-}
-
 .section_textMain {
-
     text-align: center;
 
 
@@ -116,7 +112,7 @@ img {
     color: rgb(53, 7, 126);
     border: 2px solid black;
     background-color: rgb(201, 162, 233);
-    ;
+
 
 }
 
