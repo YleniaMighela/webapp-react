@@ -1,12 +1,24 @@
-# React + Vite
+BoolMovies è un’applicazione full-stack per la gestione di film, sviluppata con React per il front-end e Express per il back-end.
+L’app consente agli utenti di visualizzare, aggiungere e gestire film tramite un’API dedicata che interagisce con un database.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Funzionalità principali:
+📜 Visualizzazione della lista dei film con dettagli principali
 
-Currently, two official plugins are available:
+➕ Aggiunta di nuovi film tramite form dedicato
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔄 Gestione globale dei dati con GlobalContext
 
-## Expanding the ESLint configuration
+🗺️ Navigazione fluida tra le pagine con React Router
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🖥️ Layout dinamico con pagina principale e versione con footer
+
+📱 Interfaccia responsive per desktop e mobile
+
+🛠️ Back-end:
+🚀 Server Express per la gestione delle richieste API
+
+⚙️ Middleware per la gestione degli errori e del CORS
+
+📂 Rotte API per creare, visualizzare e gestire i dati dei film
+
+L’applicazione è progettata per offrire un’esperienza intuitiva e una gestione dei contenuti semplice, grazie all’integrazione tra front-end e back-end
